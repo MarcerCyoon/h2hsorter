@@ -21,9 +21,14 @@
       </div>
       <br>
       <br>
-      <input type="submit" value="Start Sorting!">
-    </form>
+      <button type="button" onclick="start()">Start Sorting!</button>
   </div>
+
+  <div id="sorter" style="display: none;">
+    <div></div>
+    <button id="optionOne" type="button">Option 1</button> vs. <button id="optionTwo" type="button">Option 2</button>
+  </div>
+
   <br>
 
   <div class="footer"> © 2020 MarcerCyoon; All Rights Reserved</div>
@@ -39,6 +44,26 @@ function checkCustom() {
     changeDiv.style.display = "none";
   }
 }
+
+function start() {
+  document.getElementById("setup").style.display = "none";
+
+  var opt = document.getElementById("setChoice").value;
+  var set = []
+  if (opt == "nbaplayers") {
+    set = nbaPlayersSet;
+  } else if (opt == "nbateams") {
+    set = nbaTeamsSet;
+  } else {
+    // Custom List Support TBA
+  }
+
+  var tree = [];
+
+  document.getElementById("sorter").style.display = "block";
+}
+
+
 var nbaPlayersSet = [
   "LeBron James",
   "James Harden",
