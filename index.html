@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang=en dir="ltr">
-
 <head>
   <title>H2H Sorter</title>
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -10,14 +9,35 @@
   <div class="header"> H2H Sorter </div>
   <br>
   <div>
-    <label for="set">Choose a set to sort:</label>
-    <select id="set">
-      <option value="nbaplayers">Top NBA Players</option>
-      <option value="nbateams">NBA Teams</option>
-      <option value="custom">Custom Set</option>
-    </select>
+    <form id="form" method="POST" action="/action_page.php">
+      <label for="set">Choose a set to sort:</label>
+      <select id="set" onchange="checkCustom()">
+        <option value="nbaplayers">Top NBA Players</option>
+        <option value="nbateams">NBA Teams</option>
+        <option value="custom">Custom Set</option>
+      </select>
+      <div id="customListDiv" style="display: none;">
+        <p> Please enter your custom set below. Each element should be seperated with a comma.</p>
+        <textarea name="customList" rows="9" cols="50"></textarea>
+      </div>
+      <br>
+      <br>
+      <input type="submit" value="Start Sorting!">
+    </form>
   </div>
   <br>
 
   <div class="footer"> © 2020 MarcerCyoon; All Rights Reserved</div>
 </body>
+
+<script>
+function checkCustom() {
+  var opt = document.getElementById("set").value;
+  var changeDiv = document.getElementById("customListDiv");
+  if (opt == "custom") {
+    changeDiv.style.display = "block";
+  } else {
+    changeDiv.style.display = "none";
+  }
+}
+</script>
