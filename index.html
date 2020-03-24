@@ -8,10 +8,9 @@
 <body>
   <div class="header"> H2H Sorter </div>
   <br>
-  <div>
-    <form id="form" method="POST" action="/action_page.php">
-      <label for="set">Choose a set to sort:</label>
-      <select id="set" onchange="checkCustom()">
+  <div id="setup">
+      <label for="setChoice">Choose a set to sort:</label>
+      <select id="setChoice" onchange="checkCustom()">
         <option value="nbaplayers">Top NBA Players</option>
         <option value="nbateams">NBA Teams</option>
         <option value="custom">Custom Set</option>
@@ -32,7 +31,7 @@
 
 <script>
 function checkCustom() {
-  var opt = document.getElementById("set").value;
+  var opt = document.getElementById("setChoice").value;
   var changeDiv = document.getElementById("customListDiv");
   if (opt == "custom") {
     changeDiv.style.display = "block";
@@ -40,4 +39,28 @@ function checkCustom() {
     changeDiv.style.display = "none";
   }
 }
+var nbaPlayersSet = [
+  "LeBron James",
+  "James Harden",
+  "Giannis Antetokounmpo",
+  "Stephen Curry",
+  "Joel Embiid",
+  "Anthony Davis",
+  "Damian Lillard",
+  "Kawhi Leonard"
+];
+
+var nbaTeamsSet = [
+  "Atlanta Hawks",
+  "Boston Celtics",
+  "Brooklyn Nets",
+  "Charlotte Hornets",
+  "Chicago Bulls",
+  "Cleveland Cavaliers",
+  "Dallas Mavericks",
+  "Denver Nuggets",
+  "Detroit Pistons",
+  "Golden State Warriors"
+];
+
 </script>
