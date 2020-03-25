@@ -28,7 +28,7 @@
 
   <div id="sorter" style="display: none;">
     <div></div>
-    <button id="option0" type="button" onclick"chose(0)">Option 0</button> vs. <button id="option1" type="button" onclick="chose(1)">Option 1</button>
+    <button id="option0" type="button" onclick="chose(0)">Option 0</button> vs. <button id="option1" type="button" onclick="chose(1)">Option 1</button>
   </div>
 
   <br>
@@ -84,7 +84,25 @@ function start() {
 }
 
 function chose(num) {
+  if (num == 1) {
+    tree[currentNodes[1]].add_child(tree[topNode]);
+    topNode = currentNodes[1];
+    currentNodes[0] = currentNodes[1];
+  } else {
+    tree[topNode].add_child(tree[currentNodes[1]]);
+  }
 
+  var choice = getRandomInt(0, set.length);
+  console.log("Random Value: " + choice);
+  const choiceValue = set[choice];
+  var node = new Node(choiceValue);
+  tree.push(node);
+  set.splice(choice, 1);
+
+  // Math.abs(num - 1) makes it so if choice was 1, it returns 0, and vice versa
+  document.getElementById("option" +  Math.abs(num - 1)).innerHTML = choiceValue;
+  console.log(tree.length);
+  printTree(tree);
 }
 
 function getRandomInt(min, max) {
