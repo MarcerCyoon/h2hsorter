@@ -6,7 +6,17 @@ var nbaPlayersSet = [
   "Joel Embiid",
   "Anthony Davis",
   "Damian Lillard",
-  "Kawhi Leonard"
+  "Kawhi Leonard",
+  "Luka Doncic"
+  "Pascal Siakam",
+  "Jayson Tatum",
+  "Chris Paul",
+  "Russell Westbrook",
+  "Nikola Jokic",
+  "Ben Simmons",
+  "Trae Young",
+  "Brandon Ingram",
+  "Kyrie Irving"
 ];
 
 var nbaTeamsSet = [
