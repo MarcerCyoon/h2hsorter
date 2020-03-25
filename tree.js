@@ -1,3 +1,4 @@
+// Node class that is the basis of the tree structure.
 class Node {
   constructor(data, children=null) {
     this.data = data;
@@ -28,6 +29,7 @@ class Node {
 
 }
 
+// Debug Function: prints each node of the tree and its respective children.
 function printTree(tree) {
   console.log("Hello!");
   for (var i = 0; i < tree.length; i += 1) {
