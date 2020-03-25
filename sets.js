@@ -16,7 +16,8 @@ var nbaPlayersSet = [
   "Ben Simmons",
   "Trae Young",
   "Brandon Ingram",
-  "Kyrie Irving"
+  "Kyrie Irving",
+  "Kemba Walker"
 ];
 
 var nbaTeamsSet = [
@@ -30,4 +31,17 @@ var nbaTeamsSet = [
   "Denver Nuggets",
   "Detroit Pistons",
   "Golden State Warriors"
+];
+
+var fruitsSet = [
+  "Apples",
+  "Bananas",
+  "Pineapples",
+  "Cherries",
+  "Oranges",
+  "Mangoes",
+  "Pears",
+  "Peaches",
+  "Watermelons",
+  "Coconuts"
 ];
