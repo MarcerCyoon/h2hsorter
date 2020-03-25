@@ -7,7 +7,7 @@ var nbaPlayersSet = [
   "Anthony Davis",
   "Damian Lillard",
   "Kawhi Leonard",
-  "Luka Doncic"
+  "Luka Doncic",
   "Pascal Siakam",
   "Jayson Tatum",
   "Chris Paul",
