@@ -33,7 +33,7 @@ class Node {
 function printTree(tree) {
   for (var i = 0; i < tree.length; i += 1) {
     var childrenString = "";
-    for (var j = 0; j < tree[i].children.length; i += 1) {
+    for (var j = 0; j < tree[i].children.length; j += 1) {
       var string = tree[i].children[j].data;
       childrenString = childrenString.concat(string + ", ");
     }
