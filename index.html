@@ -4,6 +4,7 @@
   <title>H2H Sorter</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="tree.js"></script>
+  <script src="sets.js"></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
 
   <div id="sorter" style="display: none;">
     <div></div>
-    <button id="option0" type="button">Option 1</button> vs. <button id="option1" type="button">Option 2</button>
+    <button id="option0" type="button" onclick"chose(0)">Option 0</button> vs. <button id="option1" type="button" onclick="chose(1)">Option 1</button>
   </div>
 
   <br>
@@ -88,32 +89,8 @@ function chose(num) {
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+   // The maximum is exclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min)) + min;
 }
-
-
-var nbaPlayersSet = [
-  "LeBron James",
-  "James Harden",
-  "Giannis Antetokounmpo",
-  "Stephen Curry",
-  "Joel Embiid",
-  "Anthony Davis",
-  "Damian Lillard",
-  "Kawhi Leonard"
-];
-
-var nbaTeamsSet = [
-  "Atlanta Hawks",
-  "Boston Celtics",
-  "Brooklyn Nets",
-  "Charlotte Hornets",
-  "Chicago Bulls",
-  "Cleveland Cavaliers",
-  "Dallas Mavericks",
-  "Denver Nuggets",
-  "Detroit Pistons",
-  "Golden State Warriors"
-];
 
 </script>
