@@ -27,7 +27,7 @@
 
   <div id="sorter" style="display: none;">
     <div></div>
-    <button id="optionOne" type="button">Option 1</button> vs. <button id="optionTwo" type="button">Option 2</button>
+    <button id="option0" type="button">Option 1</button> vs. <button id="option1" type="button">Option 2</button>
   </div>
 
   <br>
@@ -38,6 +38,9 @@
 <script>
 var set = [];
 var tree = [];
+var topNode = 0;
+var currentNodes = [0, 1];
+var setLength = 0;
 
 function checkCustom() {
   var opt = document.getElementById("setChoice").value;
@@ -62,7 +65,30 @@ function start() {
     // Custom List Support TBA
   }
 
+  setLength = set.length;
+
+  for (var i = 0; i < 2; i += 1) {
+    var choice = getRandomInt(0, setLength);
+    console.log("Random Value: " + choice);
+    const choiceValue = set[choice];
+    var node = new Node(choiceValue);
+    tree.push(node);
+    set.splice(choice, 1);
+    var button = document.getElementById("option" + i);
+    button.innerHTML = choiceValue;
+  }
+
   document.getElementById("sorter").style.display = "block";
+}
+
+function chose(num) {
+
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 
 
