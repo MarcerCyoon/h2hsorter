@@ -9,14 +9,6 @@ class Node {
     }
   }
 
-  get data() {
-    return this.data;
-  }
-
-  get children() {
-    return this.children;
-  }
-
   add_child(node) {
     this.children.push(node);
   }
@@ -37,9 +29,8 @@ class Node {
 }
 
 function printTree(tree) {
+  console.log("Hello!");
   for (var i = 0; i < tree.length; i += 1) {
     console.log(tree[i].data + "'s Children: " + tree[i].children);
   }
 }
-
-export {Node, printTree};
