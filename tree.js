@@ -31,8 +31,12 @@ class Node {
 
 // Debug Function: prints each node of the tree and its respective children.
 function printTree(tree) {
-  console.log("Hello!");
   for (var i = 0; i < tree.length; i += 1) {
-    console.log(tree[i].data + "'s Children: " + tree[i].children);
+    var childrenString = "";
+    for (var j = 0; j < tree[i].children.length; i += 1) {
+      var string = tree[i].children[j].data;
+      childrenString = childrenString.concat(string + ", ");
+    }
+    console.log(tree[i].data + "'s Children: " + childrenString);
   }
 }
