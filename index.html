@@ -35,6 +35,10 @@
 </body>
 
 <script>
+import {Node, printTree} from "./tree.js";
+var set = [];
+var tree = [];
+
 function checkCustom() {
   var opt = document.getElementById("setChoice").value;
   var changeDiv = document.getElementById("customListDiv");
@@ -49,7 +53,7 @@ function start() {
   document.getElementById("setup").style.display = "none";
 
   var opt = document.getElementById("setChoice").value;
-  var set = []
+
   if (opt == "nbaplayers") {
     set = nbaPlayersSet;
   } else if (opt == "nbateams") {
@@ -57,8 +61,6 @@ function start() {
   } else {
     // Custom List Support TBA
   }
-
-  var tree = [];
 
   document.getElementById("sorter").style.display = "block";
 }
