@@ -24,7 +24,7 @@ class Node {
   }
 
   has_children() {
-    return (self.children.length != 0);
+    return (this.children.length != 0);
   }
 
 }
