@@ -1,3 +1,31 @@
+var nba2020AllStarSet = [
+  "Kemba Walker",
+  "Trae Young",
+  "Giannis Antetokounmpo",
+  "Pascal Siakam",
+  "Joel Embiid",
+  "James Harden",
+  "Luka Doncic",
+  "LeBron James",
+  "Kawhi Leonard",
+  "Anthony Davis",
+  "Kyle Lowry",
+  "Ben Simmons",
+  "Jimmy Butler",
+  "Khris Middleton",
+  "Bam Adebayo",
+  "Jayson Tatum",
+  "Domantas Sabonis",
+  "Chris Paul",
+  "Russell Westbrook",
+  "Damian Lillard",
+  "Donovan Mitchell",
+  "Brandon Ingram",
+  "Nikola Jokic",
+  "Rudy Gobert",
+  "Devin Booker"
+];
+
 var nbaPlayersSet = [
   "LeBron James",
   "James Harden",
@@ -30,7 +58,27 @@ var nbaTeamsSet = [
   "Dallas Mavericks",
   "Denver Nuggets",
   "Detroit Pistons",
-  "Golden State Warriors"
+  "Golden State Warriors",
+  "Houston Rockets",
+  "Indiana Pacers",
+  "Los Angeles Clippers",
+  "Los Angeles Lakers",
+  "Memphis Grizzlies",
+  "Miami Heat",
+  "Milwaukee Bucks",
+  "Minnesota Timberwolves",
+  "New Orleans Pelicans",
+  "New York Knicks",
+  "Oklahoma City Thunder",
+  "Orlando Magic",
+  "Philadelphia 76ers",
+  "Phoenix Suns",
+  "Portland Trail Blazers",
+  "Sacramento Kings",
+  "San Antonio Spurs",
+  "Toronto Raptors",
+  "Utah Jazz",
+  "Washington Wizards"
 ];
 
 var fruitsSet = [
@@ -39,5 +87,10 @@ var fruitsSet = [
   "Cherries",
   "Oranges",
   "Peaches",
-  "Watermelons"
+  "Watermelons",
+  "Coconuts",
+  "Pineapples",
+  "Strawberries",
+  "Grapes",
+  "Pears"
 ];

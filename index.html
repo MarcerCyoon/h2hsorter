@@ -14,6 +14,7 @@
   <div id="setup">
       <label for="setChoice">Choose a set to sort:</label>
       <select id="setChoice" onchange="checkCustom()">
+        <option value="nba2020allstars">2020 NBA All-Stars</option>
         <option value="nbaplayers">Top NBA Players</option>
         <option value="nbateams">NBA Teams</option>
         <option value="fruits">Common Fruits</option>
@@ -79,6 +80,8 @@ function start() {
 
   if (opt == "nbaplayers") {
     set = nbaPlayersSet;
+  } else if (opt == "nba2020allstars") {
+    set = nba2020AllStarSet;
   } else if (opt == "nbateams") {
     set = nbaTeamsSet;
   } else if (opt == "fruits") {
