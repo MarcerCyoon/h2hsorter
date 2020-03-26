@@ -94,3 +94,74 @@ var fruitsSet = [
   "Grapes",
   "Pears"
 ];
+
+var pokemonStartersSet = [
+  "Charmander",
+  "Bulbasaur",
+  "Squirtle",
+  "Pikachu",
+  "Eevee",
+  "Chikorita",
+  "Totodile",
+  "Cyndaquil",
+  "Treecko",
+  "Torchic",
+  "Mudkip",
+  "Turtwig",
+  "Chimchar",
+  "Piplup",
+  "Snivy",
+  "Tepig",
+  "Oshawott",
+  "Chespin",
+  "Fennekin",
+  "Froakie",
+  "Rowlet",
+  "Litten",
+  "Popplio",
+  "Grookey",
+  "Scorbunny",
+  "Sobble"
+];
+
+var meleeSet = [
+  "Dr. Mario",
+  "Mario",
+  "Luigi",
+  "Bowser",
+  "Peach",
+  "Yoshi",
+  "Donkey Kong",
+  "Captain Falcon",
+  "Ganondorf",
+  "Falco",
+  "Fox",
+  "Ness",
+  "Ice Climbers",
+  "Kirby",
+  "Samus",
+  "Zelda",
+  "Sheik",
+  "Link",
+  "Young Link",
+  "Pichu",
+  "Pikachu",
+  "Jigglypuff",
+  "Mewtwo",
+  "Mr. Game and Watch",
+  "Marth",
+  "Roy"
+];
+
+var smSet = [
+  "Reddit",
+  "Twitter",
+  "Facebook",
+  "TikTok",
+  "Instagram",
+  "Snapchat",
+  "Pinterest",
+  "Tumblr",
+  "YouTube",
+  "MySpace"
+];
