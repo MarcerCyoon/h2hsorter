@@ -29,6 +29,11 @@ textarea::placeholder {
   font-size: 48px;
 }
 
+.subheader {
+  font-style: italic;
+  font-size: 24px;
+}
+
 .option {
   color: black;
   background-color: white;

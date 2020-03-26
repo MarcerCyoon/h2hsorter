@@ -37,6 +37,8 @@
 
   <div id="sorter" style="display: none;">
     <div></div>
+    <div class="subheader" id="tracker"></div>
+    <br>
     <button id="option0" type="button" onclick="chose(0)" class="option">Option 0</button> vs. <button id="option1" type="button" onclick="chose(1)" class="option">Option 1</button>
   </div>
 
@@ -67,6 +69,7 @@ var currentNodes = [0, 1];
 var setLength = 0;
 //var head = 0;
 var init = true;
+var battle = 1;
 
 var setDict = {
   "nbaplayers": nbaPlayersSet,
@@ -114,10 +117,14 @@ function start() {
     button.innerHTML = choiceValue;
   }
 
+  document.getElementById("tracker").innerHTML = `${battle + detEnd(battle)} Battle`;
   document.getElementById("sorter").style.display = "block";
 }
 
 function chose(num) {
+  battle += 1;
+  document.getElementById("tracker").innerHTML = `${battle + detEnd(battle)} Battle`;
+
   if (init) {
     if (num == 1) {
       tree[currentNodes[1]].add_child(tree[currentNodes[0]]);
@@ -249,6 +256,19 @@ function getRandomInt(min, max) {
 // otherOption(num) makes it so if choice was 1, it returns 0, and vice versa
 function otherOption(num) {
   return Math.abs(num - 1);
+}
+
+// Determine if we must use st, nd, rd, or th
+function detEnd(num) {
+  if (num % 10 == 1) {
+    return 'st';
+  } else if (num % 10 == 2) {
+    return 'nd';
+  } else if (num % 10 == 3) {
+    return 'rd';
+  } else {
+    return 'th';
+  }
 }
 
 </script>
