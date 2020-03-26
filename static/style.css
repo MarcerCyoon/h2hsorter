@@ -28,6 +28,11 @@ body {
   background-color: orange;
 }
 
+#option0:active {
+  background-color: #cc8500;
+  transform: translateY(4px);
+}
+
 #option1 {
   color: black;
   background-color: white;
@@ -42,6 +47,11 @@ body {
 #option1:hover {
   color: white;
   background-color: blue;
+}
+
+#option1:active {
+  background-color: #0000b3;
+  transform: translateY(4px);
 }
 
 .footer {
