@@ -49,6 +49,7 @@ textarea::placeholder {
 
 #option0 {
   border-color: orange;
+  margin-right: 30px;
 }
 
 #option0:hover {
@@ -61,6 +62,7 @@ textarea::placeholder {
 
 #option1 {
   border-color: blue;
+  margin-left: 30px;
 }
 
 #option1:hover {
