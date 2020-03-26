@@ -44,6 +44,7 @@ var topNode = 0;
 // Always start with index 0 and 1 of tree array
 var currentNodes = [0, 1];
 var setLength = 0;
+var init = true;
 
 function checkCustom() {
   var opt = document.getElementById("setChoice").value;
@@ -87,25 +88,53 @@ function start() {
 }
 
 function chose(num) {
-  if (num == 1) {
-    tree[currentNodes[1]].add_child(tree[topNode]);
-    topNode = currentNodes[1];
-    currentNodes[0] = currentNodes[1];
-  } else {
-    tree[topNode].add_child(tree[currentNodes[1]]);
+  if (init) {
+    if (num == 1) {
+      tree[currentNodes[1]].add_child(tree[currentNodes[0]]);
+      topNode = currentNodes[1];
+    } else {
+      tree[currentNodes[0]].add_child(tree[currentNodes[1]]);
+      topNode = currentNodes[0];
+    }
+
+    if (tree.length != setLength) {
+      var choice = getRandomInt(0, set.length);
+      console.log("Random Value: " + choice);
+      const choiceValue = set[choice];
+      var node = new Node(choiceValue);
+      tree.push(node);
+      set.splice(choice, 1);
+
+      // Math.abs(num - 1) makes it so if choice was 1, it returns 0, and vice versa
+      currentNodes[Math.abs(num - 1)] = tree.length - 1;
+      document.getElementById("option" +  Math.abs(num - 1)).innerHTML = choiceValue;
+    } else {
+      init = false;
+      findConflict(num);
+    }
+
+  } else { // Initial Tree is finalized; code only reaches here to divide levels
+    // Rearrange the tree such that the winning option is now the parent of the losing option
+    // Check if head now only has one child
+    // If no, choose another random choice and compare again (wait for another choice)
+    // If yes, the next head has been decided. Set that as the head node and run findConflict()
+  }
+}
+
+function findConflict(num) {
+  console.log("Tree Finalized");
+  printTree(tree);
+  while (currentNodes[num].has_children()) {
+    if (tree[currentNodes[num]].children.length == 1) {
+      console.log("Only has one child! Move on.");
+      currentNodes[num] = tree.indexOf(tree[currentNodes[num].children[0]]);
+      continue;
+    } else {
+      // Find two random options between the children of the node; set them as the buttons
+    }
   }
 
-  var choice = getRandomInt(0, set.length);
-  console.log("Random Value: " + choice);
-  const choiceValue = set[choice];
-  var node = new Node(choiceValue);
-  tree.push(node);
-  set.splice(choice, 1);
-
-  // Math.abs(num - 1) makes it so if choice was 1, it returns 0, and vice versa
-  document.getElementById("option" +  Math.abs(num - 1)).innerHTML = choiceValue;
-  console.log(tree.length);
-  printTree(tree);
+  // If code reaches here, tree is sorted.
 }
 
 function getRandomInt(min, max) {
