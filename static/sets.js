@@ -36,12 +36,8 @@ var nbaTeamsSet = [
 var fruitsSet = [
   "Apples",
   "Bananas",
-  "Pineapples",
   "Cherries",
   "Oranges",
-  "Mangoes",
-  "Pears",
   "Peaches",
-  "Watermelons",
-  "Coconuts"
+  "Watermelons"
 ];
