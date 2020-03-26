@@ -63,6 +63,13 @@ var setLength = 0;
 //var head = 0;
 var init = true;
 
+var setDict = {
+  "nbaplayers": nbaPlayersSet,
+  "nba2020allstars": nba2020AllStarSet,
+  "nbateams": nbaTeamsSet,
+  "fruits": fruitsSet
+};
+
 function checkCustom() {
   var opt = document.getElementById("setChoice").value;
   var changeDiv = document.getElementById("customListDiv");
@@ -75,17 +82,10 @@ function checkCustom() {
 
 function start() {
   document.getElementById("setup").style.display = "none";
-
   var opt = document.getElementById("setChoice").value;
 
-  if (opt == "nbaplayers") {
-    set = nbaPlayersSet;
-  } else if (opt == "nba2020allstars") {
-    set = nba2020AllStarSet;
-  } else if (opt == "nbateams") {
-    set = nbaTeamsSet;
-  } else if (opt == "fruits") {
-    set = fruitsSet;
+  if (!(opt == "custom")) {
+    set = setDict[opt];
   } else {
     var list = document.getElementById("customList").value;
     var trimList = list.replace(/ /g, "");
