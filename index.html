@@ -124,9 +124,8 @@ function chose(num) {
       tree.push(node);
       set.splice(choice, 1);
 
-      // Math.abs(num - 1) makes it so if choice was 1, it returns 0, and vice versa
-      currentNodes[Math.abs(num - 1)] = tree.length - 1;
-      document.getElementById("option" +  Math.abs(num - 1)).innerHTML = choiceValue;
+      currentNodes[otherOption(num)] = tree.length - 1;
+      document.getElementById("option" +  otherOption(num)).innerHTML = choiceValue;
     } else {
       init = false;
       head = topNode;
@@ -152,9 +151,9 @@ function chose(num) {
       console.log("Random Value: " + choice);
       const choiceNode = tree[head].children[choice];
       tree[head].remove_child(choiceNode);
-      var button = document.getElementById("option" + Math.abs(num - 1));
+      var button = document.getElementById("option" + otherOption(num));
       button.innerHTML = choiceNode.data;
-      currentNodes[Math.abs(num - 1)] = tree.indexOf(choiceNode);
+      currentNodes[otherOption(num)] = tree.indexOf(choiceNode);
     } else {
       tree[head].add_child(tree[currentNodes[num]]);
       head = tree.indexOf(tree[head].children[0]);
@@ -222,6 +221,11 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   // The maximum is exclusive and the minimum is inclusive
   return Math.floor(Math.random() * (max - min)) + min;
+}
+
+// otherOption(num) makes it so if choice was 1, it returns 0, and vice versa
+function otherOption(num) {
+  return Math.abs(num - 1);
 }
 
 </script>
