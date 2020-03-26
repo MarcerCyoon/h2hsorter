@@ -22,7 +22,7 @@
       </select>
       <div id="customListDiv" style="display: none;">
         <p> Please enter your custom set below. Each element should be seperated with a comma.</p>
-        <textarea name="customList" rows="9" cols="50"></textarea>
+        <textarea id="customList" rows="9" cols="50"></textarea>
       </div>
       <br>
       <br>
@@ -87,7 +87,10 @@ function start() {
   } else if (opt == "fruits") {
     set = fruitsSet;
   } else {
-    // Custom List Support TBA
+    var list = document.getElementById("customList").value;
+    var trimList = list.replace(/ /g, "");
+    set = trimList.split(",");
+    console.log(set);
   }
 
   setLength = set.length;
