@@ -165,3 +165,16 @@ var smSet = [
   "YouTube",
   "MySpace"
 ];
+
+var subjectsSet = [
+  "Math",
+  "Science",
+  "English",
+  "History",
+  "Music",
+  "Languages",
+  "Physical Education",
+  "Art",
+  "Theater",
+  "Computer Science"
+];
