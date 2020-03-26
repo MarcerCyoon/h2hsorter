@@ -14,7 +14,7 @@
   <div id="setup">
       <label for="setChoice">Choose a set to sort:</label>
       <select id="setChoice" onchange="checkCustom()">
-        <option value="nba2020allstars">2020 NBA All-Stars</option>
+        <option value="nba2020allstars" selected="selected">2020 NBA All-Stars</option>
         <option value="nbaplayers">Top NBA Players</option>
         <option value="nbateams">NBA Teams</option>
         <option value="pokemonstarters">Pokemon Starters</option>
@@ -57,6 +57,8 @@
 </body>
 
 <script>
+document.getElementById("setChoice").selectedIndex = 0;
+
 var set = [];
 var tree = [];
 var topNode = 0;
