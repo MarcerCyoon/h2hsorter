@@ -7,6 +7,23 @@ body {
   text-align: center;
 }
 
+.title {
+  font-family: "Fira Sans";
+  font-weight: 800;
+  font-size: 32px;
+  border-style: none;
+  overflow: auto;
+  resize: none;
+  text-align: center;
+  height: 40px;
+  width: 550px;
+  padding-bottom: 20px;
+}
+
+textarea::placeholder {
+  color: #A9A9A9;
+}
+
 .header {
   font-weight: 800;
   font-size: 48px;

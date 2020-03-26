@@ -207,6 +207,13 @@ function findConflict() {
 function displayResults() {
   document.getElementById("sorter").style.display = "none";
   var div = document.getElementById("results");
+  var title = document.createElement("textarea");
+  title.placeholder = "Insert a title here..."
+  title.classList.add("title");
+
+  div.appendChild(title);
+
+  div.innerHTML += `<br>`;
 
   headNode = tree[topNode];
 
@@ -214,6 +221,11 @@ function displayResults() {
       div.innerHTML += `${i+1}. ${headNode.data} <br>`;
       headNode = headNode.children[0];
   }
+
+  div.innerHTML += `
+  <br>
+  <div class="footer">Feel free to screenshot and share your results!</div>
+  `;
 
   div.innerHTML += `<br>`;
 
