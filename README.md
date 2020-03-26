@@ -23,5 +23,7 @@ some use to some of you!
 
 ## Note
 
-I don't think this method is 100% superior to tier lists or other forms of personal rankings. But, it's always good to have more
+I don't think this method is 100% superior to tier lists or other forms of personal rankings. One pretty critical flaw of this
+type of ranking system is that if the dataset is really big, it'll take a long time to sort everything through. Sure, it's optimized,
+and it's not like making a tier list would be that much faster, but certainly it is a negative. But, it's always good to have more
 options. To be clear, this isn't meant to replace anything, just to provide another way to rank lists.
