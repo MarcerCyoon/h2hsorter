@@ -33,6 +33,8 @@
     <button id="option0" type="button" onclick="chose(0)">Option 0</button> vs. <button id="option1" type="button" onclick="chose(1)">Option 1</button>
   </div>
 
+  <div id="results" style="display: none;"></div>
+
   <br>
 
   <div class="footer"> © 2020 MarcerCyoon; All Rights Reserved</div>
@@ -174,6 +176,30 @@ function findConflict() {
 
   console.log("Tree Finalized.")
   printTree(tree);
+  displayResults();
+}
+
+function displayResults() {
+  document.getElementById("sorter").style.display = "none";
+  var div = document.getElementById("results");
+
+  headNode = tree[topNode];
+
+  for (var i = 0; i < setLength; i += 1) {
+      div.innerHTML += `${i+1}. ${headNode.data} <br>`;
+      headNode = headNode.children[0];
+  }
+
+  div.innerHTML += `<br>`;
+
+  var tryAgain = document.createElement("button");
+  tryAgain.innerHTML = "Try A New Set!";
+  div.appendChild(tryAgain);
+  tryAgain.addEventListener("click", function() {
+    location.reload();
+  });
+
+  div.style.display = "block";
 }
 
 function getRandomInt(min, max) {
