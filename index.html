@@ -71,7 +71,7 @@ var topNode = 0;
 // Always start with index 0 and 1 of tree array
 var currentNodes = [0, 1];
 var setLength = 0;
-//var head = 0;
+var head = 0;
 var init = true;
 var battle = 1;
 
@@ -108,14 +108,13 @@ function start() {
     var list = document.getElementById("customList").value;
     var trimList = list.replace(/ /g, "");
     set = trimList.split(",");
-    console.log(set);
   }
 
   setLength = set.length;
 
   for (var i = 0; i < 2; i += 1) {
     var choice = getRandomInt(0, set.length);
-    console.log("Random Value: " + choice);
+    // console.log("Random Value: " + choice);
     const choiceValue = set[choice];
     var node = new Node(choiceValue);
     tree.push(node);
@@ -143,7 +142,7 @@ function chose(num) {
 
     if (tree.length != setLength) {
       var choice = getRandomInt(0, set.length);
-      console.log("Random Value: " + choice);
+      // console.log("Random Value: " + choice);
       const choiceValue = set[choice];
       var node = new Node(choiceValue);
       tree.push(node);
@@ -169,11 +168,9 @@ function chose(num) {
       tree[currentNodes[0]].add_child(tree[currentNodes[1]]);
     }
 
-    console.log(tree[head].children);
-
     if (tree[head].has_children()) {
       var choice = getRandomInt(0, tree[head].children.length);
-      console.log("Random Value: " + choice);
+      // console.log("Random Value: " + choice);
       const choiceNode = tree[head].children[choice];
       tree[head].remove_child(choiceNode);
       var button = document.getElementById("option" + otherOption(num));
@@ -182,7 +179,7 @@ function chose(num) {
     } else {
       tree[head].add_child(tree[currentNodes[num]]);
       head = tree.indexOf(tree[head].children[0]);
-      console.log("Changing head to " + tree[head].data);
+      // console.log("Changing head to " + tree[head].data);
       findConflict();
     }
   }
@@ -190,19 +187,17 @@ function chose(num) {
 
 // Finds a level where there are multiple nodes (a conflict that must be resolved by user).
 function findConflict() {
-  console.log("Time to Find Conflict!");
-  printTree(tree);
   while (tree[head].has_children()) {
-    console.log("Current Head is: " + tree[head].data);
+    // console.log("Current Head is: " + tree[head].data);
     if (tree[head].children.length == 1) {
-      console.log("Only has one child! Move on.");
+      // console.log("Only has one child! Move on.");
       head = tree.indexOf(tree[head].children[0]);
       continue;
     } else {
       // Find two random options between the children of the node; set them as the buttons
       for (var i = 0; i < 2; i += 1) {
         var choice = getRandomInt(0, tree[head].children.length);
-        console.log("Random Value: " + choice);
+        // console.log("Random Value: " + choice);
         const choiceNode = tree[head].children[choice];
         tree[head].remove_child(choiceNode);
         var button = document.getElementById("option" + i);
@@ -213,8 +208,7 @@ function findConflict() {
     }
   }
 
-  console.log("Tree Finalized.")
-  printTree(tree);
+  // console.log("Tree Finalized.")
   displayResults();
 }
 
