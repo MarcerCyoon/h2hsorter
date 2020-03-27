@@ -178,3 +178,31 @@ var subjectsSet = [
   "Theater",
   "Computer Science"
 ];
+
+var weekSet = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday"
+];
+
+var switchGamesSet = [
+  "Super Mario Odyssey",
+  "Legend of Zelda: Breath of the Wild",
+  "Tetris 99",
+  "Animal Crossing: New Horizons",
+  "Super Smash Brothers Ultimate",
+  "Fire Emblem: Three Houses",
+  "Pokemon Sword/Shield",
+  "Luigi's Mansion 3",
+  "Splatoon 2",
+  "Mario Kart 8 Deluxe",
+  "Super Mario Maker 2",
+  "Kirby Star Allies",
+  "Yoshi's Crafted World",
+  "Xenoblade Chronicles 2",
+  "Octopath Traveler"
+];
