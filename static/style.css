@@ -37,6 +37,7 @@ textarea::placeholder {
 .option {
   color: black;
   background-color: white;
+  font-family: "Fira Sans";
   font-size: 24px;
   width: 300px;
   height: 300px;
