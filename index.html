@@ -106,7 +106,7 @@ function start() {
     set = setDict[opt];
   } else {
     var list = document.getElementById("customList").value;
-    var trimList = list.replace(/ /g, "");
+    var trimList = list.trim()
     set = trimList.split(",");
   }
 
